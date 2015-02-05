@@ -1,0 +1,18 @@
+{
+    "id": "mostactiveusers",
+    "name": "Most Active Users Widget",
+    "description": "Adds a panel on the Dashboard, indicating the most active users",
+    "keywords": ["most", "active", "users", "widget", "dashboard"],
+	"version": "0.1",
+	"authors": [
+		{
+			"name": "Marjana Pesic"
+		}
+	],
+	"homepage": "https://github.com/humhub/humhub-modules-most-active-users",
+	"license": "AGPL",
+	"time": "2015-02-06",
+	"humhub": {
+		"minVersion": "0.8.0"
+	},
+}
