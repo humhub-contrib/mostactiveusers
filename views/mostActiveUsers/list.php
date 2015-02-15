@@ -38,9 +38,9 @@
 
                                 <div class="media-body">
                                     <h4 class="media-heading">
-                                        <strong><?php echo $user->displayName; ?></strong>
+                                        <strong><?php echo CHtml::encode($user->displayName); ?></strong>
                                         <?php if ($user->group != null) { ?>
-                                            <small>(<?php echo $user->group->name; ?>)</small>
+                                            <small>(<?php echo CHtml::encode($user->group->name); ?>)</small>
                                         <?php } ?>
                                     </h4>
                                     <div class="mostactiveusers">
