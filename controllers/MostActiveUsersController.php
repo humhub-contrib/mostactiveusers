@@ -29,16 +29,12 @@ class MostActiveUsersController extends Controller
     public function accessRules()
     {
         return array(
-            array(
-                'allow',
-                'expression' => 'Yii::app()->user->isAdmin()'
+            array('allow', // allow authenticated user to perform 'create' and 'update' actions
+                'users' => array('@'),
             ),
-            array(
-                'deny', // deny all users
-                'users' => array(
-                    '*'
-                )
-            )
+            array('deny', // deny all users
+                'users' => array('*'),
+            ),
         );
     }
 
