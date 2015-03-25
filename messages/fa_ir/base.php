@@ -1,6 +1,7 @@
 <?php
 return array (
   '<strong>Most</strong> active people' => 'فعال‌ترین کاربرها',
+  'Back to modules' => 'بازگشت‌ به ماژول‌‌ها',
   'Get a list' => 'یک لیست تهیه کنید',
   'Most Active Users Module Configuration' => 'تنظیمات ماژول فعال‌ترین کاربرها',
   'No users.' => 'کاربری یافت نشد.',

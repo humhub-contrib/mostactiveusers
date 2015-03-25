@@ -1,6 +1,7 @@
 <?php
 return array (
   '<strong>Most</strong> active people' => 'Les membres les <strong>plus</strong> actifs',
+  'Back to modules' => 'Retour aux modules',
   'Get a list' => 'Liste',
   'Most Active Users Module Configuration' => 'Configuration du module "Most Active Users"',
   'No users.' => 'Aucun membre.',
