@@ -24,7 +24,7 @@
 
         <hr>
         <?php echo CHtml::submitButton(Yii::t('MostActiveUsersModule.base', 'Save'), array('class' => 'btn btn-primary')); ?>
-        <a class="btn btn-default" href="<?php echo $this->createUrl('//admin/module'); ?>"><?php echo Yii::t('AdminModule.base', 'Back to modules'); ?></a>
+        <a class="btn btn-default" href="<?php echo $this->createUrl('//admin/module'); ?>"><?php echo Yii::t('MostActiveUsersModule.base', 'Back to modules'); ?></a>
 
         <?php $this->endWidget(); ?>
     </div>
