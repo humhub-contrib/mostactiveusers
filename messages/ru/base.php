@@ -3,7 +3,7 @@ return array (
   '<strong>Most</strong> active people' => '<strong>Самые</strong> активные пользователи',
   'Back to modules' => 'Назад к модулям',
   'Get a list' => 'Получить список',
-  'Most Active Users Module Configuration' => 'Настройки модуля Самые активные пользователи',
+  'Most Active Users Module Configuration' => 'Настройки модуля самые активные пользователи',
   'No users.' => 'Нет пользователей.',
   'Save' => 'Сохранить',
   'The number of most actice users that will be shown.' => 'Количество активных пользователей, которое будет отображаться.',
