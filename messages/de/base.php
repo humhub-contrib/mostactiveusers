@@ -1,6 +1,6 @@
 <?php
 return array (
-  '<strong>Most</strong> active people' => '',
+  '<strong>Most</strong> active people' => 'Die <strong>aktivsten</strong> User',
   'Back to modules' => 'Zurück zu den Modulen',
   'Get a list' => '',
   'Most Active Users Module Configuration' => '',
