@@ -13,7 +13,7 @@ class MostActiveUsersConfigureForm extends CFormModel {
 
     public function attributeLabels() {
         return array(
-            'noUsers' => Yii::t('MostActiveUsersModule.base', 'The number of most actice users that will be shown.'),
+            'noUsers' => Yii::t('MostActiveUsersModule.base', 'The number of most active users that will be shown.'),
         );
     }
 
