@@ -33,7 +33,6 @@ humhub\modules\mostactiveusers\Assets::register($this);
         // Button Get a list of most active users
         echo Html::a(Yii::t('MostactiveusersModule.base', 'Get a list'), ['/mostactiveusers/list/list'], array(
             'class' => 'btn btn-info',
-            'data-toggle' => 'modal',
             'data-target' => '#globalModal'
         ));
         ?>

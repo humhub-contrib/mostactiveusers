@@ -46,19 +46,19 @@ use yii\helpers\Url;
                                 </h4>
                                 <div class="mostactiveusers">
                                     <div class="entry pull-left">
-                                        <span class="count"><?php echo $user['count_posts']; ?>
+                                        <span class="count colorInfo"><?php echo $user['count_posts']; ?>
                                         </span> <br> <span
                                             class="title"><?php echo Yii::t('MostactiveusersModule.views_mostActiveUsers_list', 'Posts created'); ?>
                                         </span>
                                     </div>
                                     <div class="entry pull-left">
-                                        <span class="count"><?php echo $user['count_comments']; ?>
+                                        <span class="count colorInfo"><?php echo $user['count_comments']; ?>
                                         </span> <br> <span
                                             class="title"><?php echo Yii::t('MostactiveusersModule.views_mostActiveUsers_list', 'Comments created'); ?>
                                         </span>
                                     </div>
                                     <div class="entry pull-left">
-                                        <span class="count"><?php echo $user['count_likes']; ?>
+                                        <span class="count colorInfo"><?php echo $user['count_likes']; ?>
                                         </span> <br> <span
                                             class="title"><?php echo Yii::t('MostactiveusersModule.views_mostActiveUsers_list', 'Likes given'); ?>
                                         </span>
