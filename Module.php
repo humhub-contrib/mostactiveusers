@@ -19,7 +19,7 @@ class Module extends \humhub\components\Module
         if (Yii::$app->hasModule('mostactiveusers')) {
 
             $event->sender->addWidget(widgets\Sidebar::className(), array(), array(
-                'sortOrder' => 0
+                'sortOrder' => 400
             ));
         }
     }

@@ -3,7 +3,7 @@
     "name": "Most Active Users Widget",
     "description": "Adds a panel on the Dashboard, indicating the most active users",
     "keywords": ["most", "active", "users", "widget", "dashboard"],
-    "version": "0.2.2",
+    "version": "0.2.3",
     "authors": [
         {
             "name": "Marjana Pesic"
