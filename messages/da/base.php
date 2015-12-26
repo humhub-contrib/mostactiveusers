@@ -17,9 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No users.' => 'Ingen brugere',
-    'The number of users must not be greater than a 7.' => 'Antallen af brugere må ikke være større end 7.',
-    'The number of users must not be negative.' => 'Antallet af brugere må ikke være negativt.',
     '<strong>Most</strong> active people' => '<strong>Mest</strong> aktive personer',
     'Back to modules' => 'Tilbage til moduler',
     'Get a list' => 'Få en liste',

@@ -17,9 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No users.' => 'Vartotojų nerasta.',
-    'The number of users must not be greater than a 7.' => 'Vartotojų skaičius neturi būti didesnis nei 7.',
-    'The number of users must not be negative.' => 'Vartotojų skaičius neturi būti neigiamas.',
     '<strong>Most</strong> active people' => '<strong>Aktyviausi</strong> žmonės',
     'Back to modules' => 'Atgal į modulius',
     'Get a list' => 'Gauti sąrašą',

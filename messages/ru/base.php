@@ -17,9 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No users.' => 'Нет пользователей.',
-    'The number of users must not be greater than a 7.' => 'Количество пользователей не должно быть больше 7.',
-    'The number of users must not be negative.' => 'Количество пользователей не должно быть отрицательным.',
     '<strong>Most</strong> active people' => '<strong>Самые</strong> активные пользователи',
     'Back to modules' => 'Назад к модулям',
     'Get a list' => 'Получить список',

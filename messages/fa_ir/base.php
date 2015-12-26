@@ -17,9 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No users.' => 'کاربری یافت نشد.',
-    'The number of users must not be greater than a 7.' => 'تعداد کاربران نباید بیشتر از ۷ نفر باشد.',
-    'The number of users must not be negative.' => 'تعداد کاربران نباید منفی باشد.',
     '<strong>Most</strong> active people' => 'فعال‌ترین کاربرها',
     'Back to modules' => 'بازگشت‌ به ماژول‌‌ها',
     'Get a list' => 'یک لیست تهیه کنید',

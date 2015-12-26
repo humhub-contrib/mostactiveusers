@@ -22,9 +22,6 @@ return [
     'Most Active Users Module Configuration' => '',
     'The number of most active users that will be shown.' => '',
     'You may configure the number users to be shown.' => '',
-    'No users.' => '@@@@',
-    'The number of users must not be greater than a 7.' => '@@@@',
-    'The number of users must not be negative.' => '@@@@',
     'Back to modules' => 'Modüllere dön',
     'Save' => 'Kaydet',
 ];

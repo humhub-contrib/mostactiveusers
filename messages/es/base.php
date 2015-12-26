@@ -17,9 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'No users.' => 'Sin usuarios.',
-    'The number of users must not be greater than a 7.' => 'El número de usuarios no debe ser mayor a 7.',
-    'The number of users must not be negative.' => 'El número de usuarios no debe ser negativo.',
     '<strong>Most</strong> active people' => '<strong>Usuarios</strong> más activos',
     'Back to modules' => 'Volver a módulos',
     'Get a list' => 'Abrir lista',
