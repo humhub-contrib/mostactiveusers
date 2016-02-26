@@ -13,7 +13,7 @@ class ConfigureForm extends \yii\base\Model
     {
         return array(
             array('noUsers', 'required'),
-            array('noUsers', 'integer', 'min' => 0, 'max' => 10),
+            array('noUsers', 'integer', 'min' => 0, 'max' => 50),
         );
     }
 
