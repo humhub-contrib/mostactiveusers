@@ -24,7 +24,7 @@ class ActiveUser extends \humhub\modules\user\models\User
     {
         $selectLikes = 'SELECT count(*) FROM `like` WHERE like.created_by=user.id';
         $selectComments = 'SELECT count(*) FROM `comment` WHERE comment.created_by=user.id';
-        $selectPosts = 'SELECT count(*) FROM `content` WHERE content.user_id=user.id  AND content.object_model=\'humhub\\\modules\\\post\\\models\\\Post\'';
+        $selectPosts = 'SELECT count(*) FROM `content` WHERE content.created_by=user.id  AND content.object_model=\'humhub\\\modules\\\post\\\models\\\Post\'';
 
 
         $query = parent::find();

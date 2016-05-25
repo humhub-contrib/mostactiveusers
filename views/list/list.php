@@ -40,9 +40,6 @@ use yii\helpers\Url;
                             <div class="media-body">
                                 <h4 class="media-heading">
                                     <strong><?php echo Html::encode($user->displayName); ?></strong>
-                                    <?php if ($user->group != null) { ?>
-                                        <small>(<?php echo Html::encode($user->group->name); ?>)</small>
-                                    <?php } ?>
                                 </h4>
                                 <div class="mostactiveusers">
                                     <div class="entry pull-left">

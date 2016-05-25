@@ -34,11 +34,11 @@ class Module extends \humhub\components\Module
      */
     public function enable()
     {
-        if (!Yii::$app->hasModule('mostactiveusers')) {
-            // set default config values
+        parent::enable();
+
+        if (Setting::Set('noUsers', 'mostactiveusers') == '') {
             Setting::Set('noUsers', 5, 'mostactiveusers');
         }
-        parent::enable();
     }
 
 }
