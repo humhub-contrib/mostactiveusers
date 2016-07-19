@@ -22,9 +22,9 @@ class ActiveUser extends \humhub\modules\user\models\User
 
     public static function find()
     {
-        $selectLikes = 'SELECT count(*) FROM `like` WHERE like.created_by=user.id';
-        $selectComments = 'SELECT count(*) FROM `comment` WHERE comment.created_by=user.id';
-        $selectPosts = 'SELECT count(*) FROM `content` WHERE content.created_by=user.id  AND content.object_model=\'humhub\\\modules\\\post\\\models\\\Post\'';
+        $selectLikes = 'SELECT count(*) FROM `like` WHERE like.created_by=user.id AND user.status!=0';
+        $selectComments = 'SELECT count(*) FROM `comment` WHERE comment.created_by=user.id AND user.status!=0';
+        $selectPosts = 'SELECT count(*) FROM `content` WHERE content.created_by=user.id AND user.status!=0 AND content.object_model=\'humhub\\\modules\\\post\\\models\\\Post\'';
 
 
         $query = parent::find();
