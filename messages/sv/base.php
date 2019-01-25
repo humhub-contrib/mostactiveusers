@@ -5,6 +5,6 @@ return array (
   'Get a list' => 'Hämta lista',
   'Most Active Users Module Configuration' => 'Mest aktiva personer - inställningar',
   'Save' => 'Spara',
-  'The number of most active users that will be shown.' => '',
+  'The number of most active users that will be shown.' => 'Antalet aktiva användare som ska visas',
   'You may configure the number users to be shown.' => '',
 );
