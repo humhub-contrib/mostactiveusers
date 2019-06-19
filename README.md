@@ -1,5 +1,9 @@
-## Most-Active-Users
+# Most Active Users
 
-Adds a panel on the Dashboard, indicating the most active users.
+Create engagement by showing your users who is really actively involved. Integrate the ranking of the most active users in your dashboard and let the race for the top begin.
 
-__Author:__ Marjana Pesic  
+## Overview
+
+- Add rankings as a widget to the dashboard
+- Set the number of users shown
+- Expand the list to get more details
