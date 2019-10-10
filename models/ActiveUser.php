@@ -28,6 +28,7 @@ class ActiveUser extends \humhub\modules\user\models\User
 
 
         $query = parent::find();
+        $query->andWhere(['user.status' => parent::STATUS_ENABLED]);
         $query->addSelect(['*',
             '(' . $selectLikes . ') as count_likes',
             '(' . $selectComments . ') as count_comments',
