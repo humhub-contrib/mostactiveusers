@@ -6,5 +6,5 @@ return array (
   'Most Active Users Module Configuration' => 'Mest aktiva personer - inställningar',
   'Save' => 'Spara',
   'The number of most active users that will be shown.' => 'Antalet aktiva användare som ska visas',
-  'You may configure the number users to be shown.' => '',
+  'You may configure the number users to be shown.' => 'Du kan konfigurera antalet användare som ska visas.',
 );
