@@ -3,9 +3,9 @@
     "name": "Most Active Users",
     "description": "Adds a widget to the dashboard showing the most active users",
     "keywords": ["most", "active", "users", "widget", "dashboard"],
-    "version": "0.2.6",
+    "version": "0.2.7",
     "humhub": {
-        "minVersion": "0.20"
+        "minVersion": "1.0"
     },
     "homepage": "https://github.com/humhub-contrib/mostactiveusers",
     "authors": [
