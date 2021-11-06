@@ -1,31 +1,40 @@
 <?php
 
-use humhub\compat\CActiveForm;
+use humhub\modules\ui\form\widgets\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
+
+/**
+ * @var $model \humhub\modules\mostactiveusers\models\ConfigureForm
+ */
+
+
 ?>
+
 <div class="panel panel-default">
-    <div class="panel-heading"><?php echo Yii::t('MostactiveusersModule.base', 'Most Active Users Module Configuration'); ?></div>
+    <div class="panel-heading">
+        <?= Yii::t('MostactiveusersModule.base', 'Most Active Users Module Configuration'); ?>
+    </div>
     <div class="panel-body">
-
-
-        <p><?php echo Yii::t('MostactiveusersModule.base', 'You may configure the number users to be shown.'); ?></p>
+        <p>
+            <?= Yii::t('MostactiveusersModule.base', 'You may configure the number users to be shown.'); ?>
+        </p>
         <br/>
 
-        <?php $form = CActiveForm::begin(); ?>
-
-        <?php echo $form->errorSummary($model); ?>
+        <?php $form = ActiveForm::begin(); ?>
 
         <div class="form-group">
-            <?php echo $form->labelEx($model, 'noUsers'); ?>
-            <?php echo $form->textField($model, 'noUsers', array('class' => 'form-control')); ?>
-            <?php echo $form->error($model, 'noUsers'); ?>
+            <?= $form->field($model, 'noUsers')->textInput(); ?>
         </div>
 
         <hr>
-        <?php echo Html::submitButton(Yii::t('MostactiveusersModule.base', 'Save'), array('class' => 'btn btn-primary')); ?>
-        <a class="btn btn-default" href="<?php echo Url::to(['/admin/module']); ?>"><?php echo Yii::t('MostactiveusersModule.base', 'Back to modules'); ?></a>
 
-        <?php CActiveForm::end(); ?>
+        <?= Html::submitButton(Yii::t('MostactiveusersModule.base', 'Save'), ['class' => 'btn btn-primary']); ?>
+
+        <a class="btn btn-default" href="<?= Url::to(['/admin/module']); ?>">
+            <?= Yii::t('MostactiveusersModule.base', 'Back to modules'); ?>
+        </a>
+
+        <?php $form::end(); ?>
     </div>
 </div>
