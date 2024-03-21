@@ -1,8 +1,7 @@
 <?php
-
-return [
-    '<strong>Most</strong> active people' => '',
-    'Comments created' => '',
-    'Likes given' => '',
-    'Posts created' => '',
-];
+return array (
+  '<strong>Most</strong> active people' => '<strong>Pertsona</strong> aktiboenak',
+  'Comments created' => 'Sortutako iruzkinak',
+  'Likes given' => 'Emandako Atsegiteak',
+  'Posts created' => 'Sortutako mezuak',
+);
