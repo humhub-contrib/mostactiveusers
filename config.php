@@ -10,4 +10,3 @@ return [
         ['class' => Sidebar::className(), 'event' => Sidebar::EVENT_INIT, 'callback' => ['humhub\modules\mostactiveusers\Module', 'onSidebarInit']],
     ],
 ];
-?>

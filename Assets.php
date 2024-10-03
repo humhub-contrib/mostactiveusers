@@ -12,9 +12,8 @@ use yii\web\AssetBundle;
 
 class Assets extends AssetBundle
 {
-
     public $publishOptions = [
-        'forceCopy' => true
+        'forceCopy' => true,
     ];
     public $css = [
         'mostactiveusers.css',

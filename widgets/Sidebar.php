@@ -7,7 +7,6 @@ use humhub\modules\mostactiveusers\models\ActiveUser;
 
 class Sidebar extends \humhub\components\Widget
 {
-
     public function run()
     {
         $users = ActiveUser::find()->limit((int) Setting::Get('noUsers', 'mostactiveusers'))->all();
@@ -15,11 +14,9 @@ class Sidebar extends \humhub\components\Widget
             return;
         }
 
-        return $this->render('sidebar', array(
-                    'users' => $users
-        ));
+        return $this->render('sidebar', [
+            'users' => $users,
+        ]);
     }
 
 }
-
-?>

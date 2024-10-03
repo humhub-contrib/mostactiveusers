@@ -10,7 +10,6 @@ namespace humhub\modules\mostactiveusers\controllers;
  */
 class ListController extends \humhub\components\Controller
 {
-
     public $pageSize = 10;
 
     /**
@@ -21,8 +20,8 @@ class ListController extends \humhub\components\Controller
         return [
             'acl' => [
                 'class' => \humhub\components\behaviors\AccessControl::className(),
-                'guestAllowedActions' => ['list']
-            ]
+                'guestAllowedActions' => ['list'],
+            ],
         ];
     }
 
@@ -38,11 +37,9 @@ class ListController extends \humhub\components\Controller
         $query->offset($pagination->offset)->limit($pagination->limit);
 
         return $this->renderAjax('list', [
-                    'users' => $query->all(),
-                    'pagination' => $pagination
+            'users' => $query->all(),
+            'pagination' => $pagination,
         ]);
     }
 
 }
-
-?>
