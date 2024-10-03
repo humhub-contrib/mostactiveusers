@@ -14,7 +14,6 @@ use humhub\models\Setting;
  */
 class ConfigController extends \humhub\modules\admin\components\Controller
 {
-
     /**
      * Configuration Action for Super Admins
      */
@@ -27,11 +26,9 @@ class ConfigController extends \humhub\modules\admin\components\Controller
             return $this->redirect(['/mostactiveusers/config/config']);
         }
 
-        return $this->render('config', array(
-                    'model' => $form
-        ));
+        return $this->render('config', [
+            'model' => $form,
+        ]);
     }
 
 }
-
-?>
