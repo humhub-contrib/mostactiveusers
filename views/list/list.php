@@ -11,7 +11,7 @@ use yii\helpers\Url;
                     aria-hidden="true">&times;</button>
             <h4 class="modal-title">
                 <?php
-                echo Yii::t('MostactiveusersModule.views_mostActiveUsers_list', '<strong>Most</strong> active people');
+                echo Yii::t('MostactiveusersModule.base', '<strong>Most</strong> active people');
                 ?>
             </h4>
         </div>
@@ -45,19 +45,19 @@ use yii\helpers\Url;
                                     <div class="entry pull-left">
                                         <span class="count colorInfo"><?php echo $user['count_posts']; ?>
                                         </span> <br> <span
-                                            class="title"><?php echo Yii::t('MostactiveusersModule.views_mostActiveUsers_list', 'Posts created'); ?>
+                                            class="title"><?php echo Yii::t('MostactiveusersModule.base', 'Posts created'); ?>
                                         </span>
                                     </div>
                                     <div class="entry pull-left">
                                         <span class="count colorInfo"><?php echo $user['count_comments']; ?>
                                         </span> <br> <span
-                                            class="title"><?php echo Yii::t('MostactiveusersModule.views_mostActiveUsers_list', 'Comments created'); ?>
+                                            class="title"><?php echo Yii::t('MostactiveusersModule.base', 'Comments created'); ?>
                                         </span>
                                     </div>
                                     <div class="entry pull-left">
                                         <span class="count colorInfo"><?php echo $user['count_likes']; ?>
                                         </span> <br> <span
-                                            class="title"><?php echo Yii::t('MostactiveusersModule.views_mostActiveUsers_list', 'Likes given'); ?>
+                                            class="title"><?php echo Yii::t('MostactiveusersModule.base', 'Likes given'); ?>
                                         </span>
                                     </div>
                                 </div>
