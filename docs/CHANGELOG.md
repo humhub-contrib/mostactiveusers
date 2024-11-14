@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.2.9 - November 14, 2024
+--------------------------
+- Enh #29: Fix for dashboard error
+
 0.2.8 - November 14, 2024
 --------------------------
 - Enh #24: Use PHP CS Fixer
