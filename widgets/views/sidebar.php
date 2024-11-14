@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 
-humhub\modules\mostactiveusers\Assets::register($this);
+humhub\modules\mostactiveusers\assets\Assets::register($this);
 ?>
 <div class="panel panel-default" id="mostactiveusers-panel">
 
@@ -38,4 +38,3 @@ humhub\modules\mostactiveusers\Assets::register($this);
         ?>
     </div>
 </div>
-
