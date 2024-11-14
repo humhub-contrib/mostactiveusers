@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.2.8 - Unreleased
-----------------------
+0.2.8 - November 14, 2024
+--------------------------
 - Enh #24: Use PHP CS Fixer
 - Enh #25: Reduce translation message categories
 - Fix #26: Resources path for HumHub v1.17
