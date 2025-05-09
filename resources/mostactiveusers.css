@@ -13,7 +13,7 @@
   line-height: 0.8em;
 }
 
-.media .circle {
+#mostactiveusers-modal .circle {
     border-radius: 50%;
     behavior: url(PIE.htc);
 
