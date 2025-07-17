@@ -29,7 +29,7 @@ Assets::register($this);
                      width="40" alt="40x40" data-src="holder.js/40x40" style="width: 40px; height: 40px;"
                      data-bs-toggle="tooltip"
                      data-placement="top" title=""
-                     data-original-title="<?php echo Html::encode($user->displayName); ?>">
+                     data-bs-title="<?php echo Html::encode($user->displayName); ?>">
             </a>
 
         <?php endforeach; ?>
