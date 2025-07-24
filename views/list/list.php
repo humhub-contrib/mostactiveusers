@@ -1,6 +1,7 @@
 <?php
 
 use humhub\modules\mostactiveusers\models\ActiveUser;
+use humhub\modules\user\widgets\Image;
 use humhub\widgets\AjaxLinkPager;
 use humhub\widgets\modal\Modal;
 use yii\data\Pagination;
@@ -25,29 +26,31 @@ use yii\helpers\Html;
         ?>
             <div>
                 <a href="<?php echo $user->getUrl(); ?>">
-                    <div class="d-flex">
-                        <span class="circle">
+                    <div class="d-flex align-items-center">
+                        <span
+                            class="fs-2 badge rounded-pill text-bg-secondary"
+                            style="width: 40px; height: 40px; font-size: 20px !important; padding-top: 10px;">
                             <?= $pagination->page * $pagination->pageSize + (++$i) ?>
                         </span>
 
-                        <img
-                            src="<?= $user->getProfileImage()->getUrl() ?>"
-                            class="rounded tt img_margin mx-3" height="50" width="50"
-                            alt="50x50" style="width: 50px; height: 50px;"
-                            data-src="holder.js/50x50">
+                        <?= Image::widget([
+                            'user' => $user,
+                            'width' => 50,
+                            'imageOptions' => ['class' => 'mx-3'],
+                        ]) ?>
 
                         <div class="flex-grow-1">
-                            <h4 class="mt-0">
+                            <h4 class="mb-0">
                                 <strong><?= Html::encode($user->displayName) ?></strong>
                             </h4>
                             <div class="mostactiveusers">
-                                <div class="entry float-start">
+                                <div class="entry float-start me-4">
                                     <span class="count text-info"><?= $user['count_posts'] ?>
                                     </span> <br> <span
                                         class="title"><?= Yii::t('MostactiveusersModule.base', 'Posts created') ?>
                                     </span>
                                 </div>
-                                <div class="entry float-start">
+                                <div class="entry float-start me-4">
                                     <span class="count text-info"><?= $user['count_comments'] ?>
                                     </span> <br> <span
                                         class="title"><?= Yii::t('MostactiveusersModule.base', 'Comments created') ?>
