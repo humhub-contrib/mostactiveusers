@@ -4,6 +4,7 @@ use humhub\modules\mostactiveusers\models\ActiveUser;
 use humhub\modules\user\widgets\Image;
 use humhub\widgets\AjaxLinkPager;
 use humhub\widgets\modal\Modal;
+use humhub\widgets\modal\ModalButton;
 use yii\data\Pagination;
 use yii\helpers\Html;
 
@@ -16,7 +17,7 @@ use yii\helpers\Html;
 <?php Modal::beginDialog([
     'id' => 'mostactiveusers-modal',
     'title' => Yii::t('MostactiveusersModule.base', '<strong>Most</strong> active people'),
-    'footer' => Html::tag('div', AjaxLinkPager::widget(['pagination' => $pagination]), ['class' => 'pagination-container']),
+    'footer' => ModalButton::cancel(Yii::t('base', 'Close')),
 ]) ?>
 
     <div class="row hh-list">
@@ -68,6 +69,10 @@ use yii\helpers\Html;
                 </a>
             </div>
         <?php endforeach; ?>
+    </div>
+
+    <div class="pagination-container">
+        <?= AjaxLinkPager::widget(['pagination' => $pagination]) ?>
     </div>
 
 <?php Modal::endDialog() ?>
