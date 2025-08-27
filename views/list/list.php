@@ -1,81 +1,78 @@
 <?php
 
+use humhub\modules\mostactiveusers\models\ActiveUser;
+use humhub\modules\user\widgets\Image;
+use humhub\widgets\AjaxLinkPager;
+use humhub\widgets\modal\Modal;
+use humhub\widgets\modal\ModalButton;
+use yii\data\Pagination;
 use yii\helpers\Html;
-use yii\helpers\Url;
+
+/**
+ * @var $users ActiveUser[]
+ * @var $pagination Pagination
+ */
 ?>
-<div class="modal-dialog modal-dialog-normal animated fadeIn">
-    <div class="modal-content">
 
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"
-                    aria-hidden="true">&times;</button>
-            <h4 class="modal-title">
-                <?php
-                echo Yii::t('MostactiveusersModule.base', '<strong>Most</strong> active people');
-                ?>
-            </h4>
-        </div>
-        <br>
+<?php Modal::beginDialog([
+    'id' => 'mostactiveusers-modal',
+    'title' => Yii::t('MostactiveusersModule.base', '<strong>Most</strong> active people'),
+    'footer' => ModalButton::cancel(Yii::t('base', 'Close')),
+]) ?>
 
-        <ul class="media-list">
-            <?php
-            $i = 0;
-            foreach ($users as $user) {
-                ?>
-                <li>
-                    <a href="<?php echo $user->getUrl(); ?>">
-                        <div class="media">
-                            <span class="pull-left circle"><?php
-                                echo $pagination->page * $pagination->pageSize + ( ++$i);
-                                ?>
-                            </span>
+    <div class="row hh-list">
+        <?php
+        $i = 0;
+        foreach ($users as $user) :
+        ?>
+            <div>
+                <a href="<?php echo $user->getUrl(); ?>">
+                    <div class="d-flex align-items-center">
+                        <span
+                            class="fs-2 badge rounded-pill text-bg-secondary"
+                            style="width: 40px; height: 40px; font-size: 20px !important; padding-top: 10px;">
+                            <?= $pagination->page * $pagination->pageSize + (++$i) ?>
+                        </span>
 
-                            <img
-                                src="<?php echo $user->getProfileImage()->getUrl(); ?>"
-                                class="img-rounded tt img_margin pull-left" height="50" width="50"
-                                alt="50x50" style="width: 50px; height: 50px;"
-                                data-src="holder.js/50x50">
+                        <?= Image::widget([
+                            'user' => $user,
+                            'width' => 50,
+                            'imageOptions' => ['class' => 'mx-3'],
+                        ]) ?>
 
-
-                            <div class="media-body">
-                                <h4 class="media-heading">
-                                    <strong><?php echo Html::encode($user->displayName); ?></strong>
-                                </h4>
-                                <div class="mostactiveusers">
-                                    <div class="entry pull-left">
-                                        <span class="count colorInfo"><?php echo $user['count_posts']; ?>
-                                        </span> <br> <span
-                                            class="title"><?php echo Yii::t('MostactiveusersModule.base', 'Posts created'); ?>
-                                        </span>
-                                    </div>
-                                    <div class="entry pull-left">
-                                        <span class="count colorInfo"><?php echo $user['count_comments']; ?>
-                                        </span> <br> <span
-                                            class="title"><?php echo Yii::t('MostactiveusersModule.base', 'Comments created'); ?>
-                                        </span>
-                                    </div>
-                                    <div class="entry pull-left">
-                                        <span class="count colorInfo"><?php echo $user['count_likes']; ?>
-                                        </span> <br> <span
-                                            class="title"><?php echo Yii::t('MostactiveusersModule.base', 'Likes given'); ?>
-                                        </span>
-                                    </div>
+                        <div class="flex-grow-1">
+                            <h4 class="mb-0">
+                                <strong><?= Html::encode($user->displayName) ?></strong>
+                            </h4>
+                            <div class="mostactiveusers">
+                                <div class="entry float-start me-4">
+                                    <span class="count text-info"><?= $user['count_posts'] ?>
+                                    </span> <br> <span
+                                        class="title"><?= Yii::t('MostactiveusersModule.base', 'Posts created') ?>
+                                    </span>
+                                </div>
+                                <div class="entry float-start me-4">
+                                    <span class="count text-info"><?= $user['count_comments'] ?>
+                                    </span> <br> <span
+                                        class="title"><?= Yii::t('MostactiveusersModule.base', 'Comments created') ?>
+                                    </span>
+                                </div>
+                                <div class="entry float-start">
+                                    <span class="count text-info"><?= $user['count_likes'] ?>
+                                    </span> <br> <span
+                                        class="title"><?= Yii::t('MostactiveusersModule.base', 'Likes given') ?>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    </a>
-                </li>
-                <?php
-            }
-            ?>
-        </ul>
-
-
-        <div class="modal-footer" style="padding: 5px">
-            <div class="pagination-container">
-                <?= \humhub\widgets\AjaxLinkPager::widget(['pagination' => $pagination]); ?>
+                    </div>
+                </a>
             </div>
-        </div>
-
+        <?php endforeach; ?>
     </div>
-</div>
+
+    <div class="pagination-container">
+        <?= AjaxLinkPager::widget(['pagination' => $pagination]) ?>
+    </div>
+
+<?php Modal::endDialog() ?>
