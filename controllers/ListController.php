@@ -2,6 +2,10 @@
 
 namespace humhub\modules\mostactiveusers\controllers;
 
+use humhub\components\behaviors\AccessControl;
+use humhub\modules\mostactiveusers\models\ActiveUser;
+use yii\data\Pagination;
+
 /**
  * Most Active Users Controller defines actions for statistics of users activity.
  *
@@ -10,7 +14,6 @@ namespace humhub\modules\mostactiveusers\controllers;
  */
 class ListController extends \humhub\components\Controller
 {
-
     public $pageSize = 10;
 
     /**
@@ -20,9 +23,9 @@ class ListController extends \humhub\components\Controller
     {
         return [
             'acl' => [
-                'class' => \humhub\components\behaviors\AccessControl::className(),
-                'guestAllowedActions' => ['list']
-            ]
+                'class' => AccessControl::class,
+                'guestAllowedActions' => ['list'],
+            ],
         ];
     }
 
@@ -31,18 +34,16 @@ class ListController extends \humhub\components\Controller
      */
     public function actionList()
     {
-        $query = \humhub\modules\mostactiveusers\models\ActiveUser::find();
+        $query = ActiveUser::find();
 
         $countQuery = clone $query;
-        $pagination = new \yii\data\Pagination(['totalCount' => $countQuery->count(), 'pageSize' => $this->pageSize]);
+        $pagination = new Pagination(['totalCount' => $countQuery->count(), 'pageSize' => $this->pageSize]);
         $query->offset($pagination->offset)->limit($pagination->limit);
 
         return $this->renderAjax('list', [
-                    'users' => $query->all(),
-                    'pagination' => $pagination
+            'users' => $query->all(),
+            'pagination' => $pagination,
         ]);
     }
 
 }
-
-?>

@@ -15,7 +15,6 @@ namespace humhub\modules\mostactiveusers\models;
  */
 class ActiveUser extends \humhub\modules\user\models\User
 {
-
     public $count_posts;
     public $count_likes;
     public $count_comments;

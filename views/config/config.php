@@ -1,6 +1,6 @@
 <?php
 
-use humhub\modules\ui\form\widgets\ActiveForm;
+use humhub\widgets\form\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
@@ -23,7 +23,7 @@ use yii\helpers\Url;
 
         <?php $form = ActiveForm::begin(); ?>
 
-        <div class="form-group">
+        <div class="mb-3">
             <?= $form->field($model, 'noUsers')->textInput(); ?>
         </div>
 
@@ -31,7 +31,7 @@ use yii\helpers\Url;
 
         <?= Html::submitButton(Yii::t('MostactiveusersModule.base', 'Save'), ['class' => 'btn btn-primary']); ?>
 
-        <a class="btn btn-default" href="<?= Url::to(['/admin/module']); ?>">
+        <a class="btn btn-light" href="<?= Url::to(['/admin/module']); ?>">
             <?= Yii::t('MostactiveusersModule.base', 'Back to modules'); ?>
         </a>
 
