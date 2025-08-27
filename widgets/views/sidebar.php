@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Html;
+
 use humhub\modules\mostactiveusers\models\ActiveUser;
 use humhub\modules\user\widgets\Image;
 use humhub\widgets\modal\ModalButton;
@@ -8,6 +10,8 @@ use humhub\widgets\PanelMenu;
 /**
  * @var $users ActiveUser[]
  */
+
+humhub\modules\mostactiveusers\assets\Assets::register($this);
 ?>
 <div class="panel panel-default" id="mostactiveusers-panel">
 
