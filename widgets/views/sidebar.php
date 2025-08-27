@@ -31,7 +31,7 @@ use humhub\widgets\PanelMenu;
 
         <div>
             <br>
-            <?= ModalButton::info(Yii::t('MostactiveusersModule.base', 'Get a list'))
+            <?= ModalButton::light(Yii::t('MostactiveusersModule.base', 'Get a list'))
                 ->load(['/mostactiveusers/list/list']) ?>
         </div>
     </div>
