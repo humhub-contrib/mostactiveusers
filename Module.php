@@ -4,7 +4,6 @@ namespace humhub\modules\mostactiveusers;
 
 use Yii;
 use yii\helpers\Url;
-use humhub\models\Setting;
 
 class Module extends \humhub\components\Module
 {
@@ -17,7 +16,7 @@ class Module extends \humhub\components\Module
     {
         if (Yii::$app->hasModule('mostactiveusers')) {
 
-            $event->sender->addWidget(widgets\Sidebar::className(), [], [
+            $event->sender->addWidget(widgets\Sidebar::class, [], [
                 'sortOrder' => 400,
             ]);
         }
@@ -35,8 +34,8 @@ class Module extends \humhub\components\Module
     {
         parent::enable();
 
-        if (Setting::Set('noUsers', 'mostactiveusers') == '') {
-            Setting::Set('noUsers', 5, 'mostactiveusers');
+        if (!$this->settings->get('noUsers')) {
+            $this->settings->set('noUsers', 5);
         }
     }
 

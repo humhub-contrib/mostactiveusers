@@ -2,9 +2,9 @@
 
 namespace humhub\modules\mostactiveusers\controllers;
 
-use Yii;
+use humhub\modules\admin\components\Controller;
 use humhub\modules\mostactiveusers\models\ConfigureForm;
-use humhub\models\Setting;
+use Yii;
 
 /**
  * Defines the configure actions.
@@ -12,7 +12,7 @@ use humhub\models\Setting;
  * @package humhub.modules.mostactiveusers.controllers
  * @author Marjana Pesic
  */
-class ConfigController extends \humhub\modules\admin\components\Controller
+class ConfigController extends Controller
 {
     /**
      * Configuration Action for Super Admins
@@ -20,9 +20,9 @@ class ConfigController extends \humhub\modules\admin\components\Controller
     public function actionConfig()
     {
         $form = new ConfigureForm();
-        $form->noUsers = Setting::Get('noUsers', 'mostactiveusers');
-        if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-            $form->noUsers = Setting::Set('noUsers', $form->noUsers, 'mostactiveusers');
+
+        if ($form->load(Yii::$app->request->post()) && $form->save()) {
+            $this->view->saved();
             return $this->redirect(['/mostactiveusers/config/config']);
         }
 
