@@ -1,7 +1,5 @@
 <?php
 
-use yii\helpers\Html;
-
 use humhub\modules\mostactiveusers\models\ActiveUser;
 use humhub\modules\user\widgets\Image;
 use humhub\widgets\modal\ModalButton;
@@ -19,19 +17,19 @@ humhub\modules\mostactiveusers\assets\Assets::register($this);
     <?php PanelMenu::widget(['id' => 'mostactiveusers-panel']); ?>
 
     <div class="panel-heading">
-        <?php echo Yii::t('MostactiveusersModule.base', '<strong>Most</strong> active people'); ?>
+        <?= Yii::t('MostactiveusersModule.base', '<strong>Most</strong> active people') ?>
     </div>
     <div class="panel-body">
-        <?php foreach ($users as $user) : ?>
-
-            <?= Image::widget([
-                'user' => $user,
-                'width' => 40,
-                'showTooltip' => true,
-                'showSelfOnlineStatus' => true,
-            ]) ?>
-
-        <?php endforeach; ?>
+        <div class="d-flex gap-2 flex-wrap">
+            <?php foreach ($users as $user) : ?>
+                <?= Image::widget([
+                    'user' => $user,
+                    'width' => 40,
+                    'showTooltip' => true,
+                    'showSelfOnlineStatus' => true,
+                ]) ?>
+            <?php endforeach; ?>
+        </div>
 
         <div>
             <br>

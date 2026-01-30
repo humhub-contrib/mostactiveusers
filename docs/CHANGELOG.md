@@ -4,6 +4,7 @@ Changelog
 0.3.1 (Unreleased)
 -----------------------
 - Fix #29: Replace deprecated module setting methods
+- Fix: Vertical spacing between Profile images in the widget
 
 0.3.0 - August 27, 2025
 ------------------------
