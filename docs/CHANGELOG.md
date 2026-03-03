@@ -5,7 +5,7 @@ Changelog
 -----------------------
 - Fix #29: Replace deprecated module setting methods
 - Fix: Vertical spacing between Profile images in the widget
-- Enh: Review layout of the modal list with smaller texts and remove CSS
+- Enh #32: Review layout of the modal list with smaller texts and remove CSS
 
 0.3.0 - August 27, 2025
 ------------------------
