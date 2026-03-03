@@ -8,8 +8,6 @@ use humhub\widgets\PanelMenu;
 /**
  * @var $users ActiveUser[]
  */
-
-humhub\modules\mostactiveusers\assets\Assets::register($this);
 ?>
 <div class="panel panel-default" id="mostactiveusers-panel">
 
