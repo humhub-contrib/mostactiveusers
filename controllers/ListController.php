@@ -68,7 +68,7 @@ class ListController extends \humhub\components\Controller
 
         $exporter = new SpreadsheetExport([
             'dataProvider' => new ActiveDataProvider([
-                'query' => ActiveUser::find()->joinWith('profile'),
+                'query' => ActiveUser::find()->joinWith('profile')->limit(1000),
                 'pagination' => false,
             ]),
             'columns' => [
