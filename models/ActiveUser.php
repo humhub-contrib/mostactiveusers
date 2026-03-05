@@ -42,8 +42,8 @@ class ActiveUser extends \humhub\modules\user\models\User
         $hiddenGroupIds = Yii::$app->getModule('mostactiveusers')->settings->getSerialized('hiddenGroups', []);
         $hiddenGroupIds = is_array($hiddenGroupIds) ? array_filter(array_map('intval', $hiddenGroupIds)) : [];
         if (!empty($hiddenGroupIds)) {
-            $query->joinWith(['groupUsers group_user' =>
-                static fn(ActiveQuery $groupUserQuery) => $groupUserQuery->andOnCondition([
+            $query->joinWith(['groupUsers group_user'
+                => static fn(ActiveQuery $groupUserQuery) => $groupUserQuery->andOnCondition([
                     'group_user.group_id' => $hiddenGroupIds,
                 ])], false);
             $query->andWhere(['group_user.user_id' => null]);
