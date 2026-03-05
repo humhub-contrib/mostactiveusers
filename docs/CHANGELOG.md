@@ -5,6 +5,7 @@ Changelog
 -----------------------
 - Fix #29: Replace deprecated module setting methods
 - Fix: Vertical spacing between Profile images in the widget
+- Enh #33: Add group filtering and export
 
 0.3.0 - August 27, 2025
 ------------------------

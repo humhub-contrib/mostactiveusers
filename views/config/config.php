@@ -17,7 +17,7 @@ use yii\helpers\Url;
     </div>
     <div class="panel-body">
         <p>
-            <?= Yii::t('MostactiveusersModule.base', 'You may configure the number users to be shown.'); ?>
+            <?= Yii::t('MostactiveusersModule.base', 'You may configure the number of users to be shown and hide users from specific groups.'); ?>
         </p>
         <br/>
 
@@ -25,6 +25,9 @@ use yii\helpers\Url;
 
         <div class="mb-3">
             <?= $form->field($model, 'noUsers')->textInput(); ?>
+        </div>
+        <div class="mb-3">
+            <?= $form->field($model, 'hiddenGroups')->checkboxList($model->getGroupOptions()) ?>
         </div>
 
         <hr>

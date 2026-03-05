@@ -37,6 +37,10 @@ class Module extends \humhub\components\Module
         if (!$this->settings->get('noUsers')) {
             $this->settings->set('noUsers', 5);
         }
+
+        if (!$this->settings->get('hiddenGroups')) {
+            $this->settings->setSerialized('hiddenGroups', []);
+        }
     }
 
 }
