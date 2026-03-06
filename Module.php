@@ -2,6 +2,7 @@
 
 namespace humhub\modules\mostactiveusers;
 
+use humhub\modules\mostactiveusers\models\ActiveUser;
 use Yii;
 use yii\helpers\Url;
 
@@ -41,6 +42,11 @@ class Module extends \humhub\components\Module
         if (!$this->settings->get('hiddenGroups')) {
             $this->settings->setSerialized('hiddenGroups', []);
         }
+    }
+
+    public static function onActivityChanged(): void
+    {
+        ActiveUser::invalidateCache();
     }
 
 }

@@ -54,6 +54,7 @@ class ConfigureForm extends \yii\base\Model
 
         Yii::$app->getModule('mostactiveusers')->settings->set('noUsers', $this->noUsers);
         Yii::$app->getModule('mostactiveusers')->settings->setSerialized('hiddenGroups', is_array($this->hiddenGroups) ? $this->hiddenGroups : []);
+        ActiveUser::invalidateCache();
 
         return true;
     }

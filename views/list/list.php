@@ -32,20 +32,21 @@ use yii\helpers\Url;
                 ->link(Url::to(['/mostactiveusers/list/export', 'format' => 'xlsx']))
                 ->icon('file-excel-o'),
         ]; ?>
-        <div class="btn-group dropdown calendar-entry-participants-export-button float-end mb-3">
+        <div class="btn-group dropdown float-end mb-3">
             <?= Button::accent()->icon('download')->sm()
-                ->link($buttons[0]->getHref())
-                ->pjax(false)->loader(false) ?>
+                    ->link($buttons[0]->getHref())
+                    ->pjax(false)->loader(false) ?>
             <?= Button::accent('')->sm()
-                ->cssClass('dropdown-toggle')
-                ->options(['data-bs-toggle' => 'dropdown'])
-                ->loader(false) ?>
+                    ->cssClass('dropdown-toggle')
+                    ->options(['data-bs-toggle' => 'dropdown'])
+                    ->loader(false) ?>
             <ul class="dropdown-menu">
                 <?php foreach ($buttons as $button) : ?>
                     <li><?= $button->pjax(false)->sm()->cssClass('dropdown-item') ?></li>
                 <?php endforeach; ?>
             </ul>
         </div>
+        <div class="clearfix"></div>
     <?php endif; ?>
 
     <div class="row hh-list">
