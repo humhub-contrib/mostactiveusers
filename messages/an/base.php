@@ -1,13 +1,17 @@
 <?php
+
 return [
-  '<strong>Most</strong> active people' => '',
-  'Back to modules' => 'Zpět k modulům',
-  'Comments created' => '',
-  'Get a list' => '',
-  'Likes given' => '',
-  'Most Active Users Module Configuration' => '',
-  'Posts created' => '',
-  'Save' => 'Uložit',
-  'The number of most active users that will be shown.' => '',
-  'You may configure the number users to be shown.' => '',
+    'Back to modules' => 'Zpět k modulům',
+    'Save' => 'Uložit',
+    '<strong>Most</strong> active people' => '',
+    'Comments created' => '',
+    'Export as {type}' => '',
+    'Get a list' => '',
+    'Hide users from these groups' => '',
+    'Likes given' => '',
+    'Most Active Users Module Configuration' => '',
+    'Posts created' => '',
+    'The number of most active users that will be shown.' => '',
+    'Total activity' => '',
+    'You may configure the number of users to be shown and hide users from specific groups.' => '',
 ];
