@@ -30,7 +30,7 @@ use yii\helpers\Html;
             ?>
             <div>
                 <a href="<?php echo $user->getUrl(); ?>">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex">
                         <span
                             class="fs-2 badge rounded-pill text-bg-light"
                             style="width: 40px; height: 40px; font-size: <?= $fontSize ?>px !important; padding-top: <?= $paddingTop ?>px;">
@@ -44,7 +44,7 @@ use yii\helpers\Html;
                             ]) ?>
                         </div>
 
-                        <div>
+                        <div class="d-flex flex-column justify-content-between">
                             <h4 class="mb-0">
                                 <strong><?= Html::encode($user->displayName) ?></strong>
                             </h4>
