@@ -7,6 +7,7 @@ Changelog
 - Fix: Vertical spacing between Profile images in the widget
 - Enh #33: Add group filtering and export
 - Enh #35: Implemented cache in Sidebar Widget
+- Enh #36: Fix filter users with hidden groups
 
 0.3.0 - August 27, 2025
 ------------------------
