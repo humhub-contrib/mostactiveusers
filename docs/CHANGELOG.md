@@ -8,6 +8,7 @@ Changelog
 - Enh #32: Review layout of the modal list with smaller texts and remove CSS
 - Enh #33: Add group filtering and export
 - Enh #35: Implemented cache in Sidebar Widget
+- Enh #36: Fix filter users with hidden groups
 
 0.3.0 - August 27, 2025
 ------------------------

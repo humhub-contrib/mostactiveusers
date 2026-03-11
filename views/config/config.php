@@ -1,5 +1,7 @@
 <?php
 
+use humhub\modules\admin\models\forms\UserEditForm;
+use humhub\modules\ui\form\widgets\MultiSelect;
 use humhub\widgets\form\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -27,7 +29,10 @@ use yii\helpers\Url;
             <?= $form->field($model, 'noUsers')->textInput(); ?>
         </div>
         <div class="mb-3">
-            <?= $form->field($model, 'hiddenGroups')->checkboxList($model->getGroupOptions()) ?>
+            <?= $form->field($model, 'hiddenGroups')->widget(MultiSelect::class, [
+                'items' => UserEditForm::getGroupItems(),
+                'options' => ['data-tags' => 'false'],
+            ]) ?>
         </div>
 
         <hr>

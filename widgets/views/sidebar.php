@@ -10,10 +10,7 @@ use humhub\widgets\PanelMenu;
  */
 ?>
 <div class="panel panel-default" id="mostactiveusers-panel">
-
-    <!-- Display panel menu widget -->
-    <?php PanelMenu::widget(['id' => 'mostactiveusers-panel']); ?>
-
+    <?= PanelMenu::widget(['id' => 'mostactiveusers-panel']) ?>
     <div class="panel-heading">
         <?= Yii::t('MostactiveusersModule.base', '<strong>Most</strong> active people') ?>
     </div>

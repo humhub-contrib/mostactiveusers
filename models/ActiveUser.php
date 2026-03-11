@@ -8,9 +8,9 @@
 
 namespace humhub\modules\mostactiveusers\models;
 
+use humhub\modules\user\models\GroupUser;
 use Yii;
 use yii\caching\TagDependency;
-use yii\db\ActiveQuery;
 
 /**
  * Description of StatUser
@@ -53,19 +53,18 @@ class ActiveUser extends \humhub\modules\user\models\User
 
         $query = parent::find();
         $query->andWhere(['user.status' => parent::STATUS_ENABLED]);
-        $query->addSelect(['*',
+        $query->addSelect(['user.*',
             '(' . $selectLikes . ') as count_likes',
             '(' . $selectComments . ') as count_comments',
             '(' . $selectPosts . ') as count_posts',
             $selectTotal . ' as count_total',
         ]);
+
         $hiddenGroupIds = static::getHiddenGroupIds();
         if (!empty($hiddenGroupIds)) {
-            $query->joinWith(['groupUsers group_user'
-                => static fn(ActiveQuery $groupUserQuery) => $groupUserQuery->andOnCondition([
-                    'group_user.group_id' => $hiddenGroupIds,
-                ])], false);
-            $query->andWhere(['group_user.user_id' => null]);
+            $query->andWhere(['NOT IN', 'user.id', GroupUser::find()
+                ->select('user_id')
+                ->where(['group_id' => $hiddenGroupIds])]);
         }
 
         $query->orderBy([$selectTotal => SORT_DESC]);
