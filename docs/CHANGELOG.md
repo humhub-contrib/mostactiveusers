@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.3.1 (Unreleased)
------------------------
+0.3.1 (March 11, 2026)
+----------------------
 - Fix #29: Replace deprecated module setting methods
 - Fix: Vertical spacing between Profile images in the widget
+- Enh #32: Review layout of the modal list with smaller texts and remove CSS
 - Enh #33: Add group filtering and export
 - Enh #35: Implemented cache in Sidebar Widget
 
