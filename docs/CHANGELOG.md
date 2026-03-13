@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.3.2 (Unreleased)
+------------------
+- Enh: Automated code refactoring for HumHub 1.18 using Rector
+
 0.3.1 (March 11, 2026)
 ----------------------
 - Fix #29: Replace deprecated module setting methods
