@@ -77,15 +77,15 @@ class ListController extends \humhub\components\Controller
                 'profile.firstname',
                 'profile.lastname',
                 [
-                    'label' => Yii::t('MostactiveusersModule.base', 'Posts created'),
+                    'label' => Yii::t('MostactiveusersModule.base', 'Posts'),
                     'attribute' => 'count_posts',
                 ],
                 [
-                    'label' => Yii::t('MostactiveusersModule.base', 'Comments created'),
+                    'label' => Yii::t('MostactiveusersModule.base', 'Comments'),
                     'attribute' => 'count_comments',
                 ],
                 [
-                    'label' => Yii::t('MostactiveusersModule.base', 'Likes given'),
+                    'label' => Yii::t('MostactiveusersModule.base', 'Likes'),
                     'attribute' => 'count_likes',
                 ],
                 [
