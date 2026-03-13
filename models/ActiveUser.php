@@ -26,7 +26,7 @@ class ActiveUser extends \humhub\modules\user\models\User
 
     public static function invalidateCache(): void
     {
-        TagDependency::invalidate(Yii::$app->cache, __CLASS__);
+        TagDependency::invalidate(Yii::$app->cache, self::class);
     }
 
     public static function getMostActiveUsers(int $limit): array
@@ -38,9 +38,7 @@ class ActiveUser extends \humhub\modules\user\models\User
             'hiddenGroups' => static::getHiddenGroupIds(),
         ];
 
-        return Yii::$app->cache->getOrSet($cacheKey, static function () use ($limit) {
-            return static::find()->limit($limit)->all();
-        }, 0, new TagDependency(['tags' => __CLASS__]));
+        return Yii::$app->cache->getOrSet($cacheKey, static fn() => static::find()->limit($limit)->all(), 0, new TagDependency(['tags' => self::class]));
     }
 
     public static function find()
