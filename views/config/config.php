@@ -1,18 +1,13 @@
 <?php
 
 use humhub\modules\admin\models\forms\UserEditForm;
+use humhub\modules\mostactiveusers\models\ConfigureForm;
 use humhub\modules\ui\form\widgets\MultiSelect;
+use humhub\widgets\bootstrap\Button;
 use humhub\widgets\form\ActiveForm;
-use yii\helpers\Html;
-use yii\helpers\Url;
 
-/**
- * @var $model \humhub\modules\mostactiveusers\models\ConfigureForm
- */
-
-
+/* @var $model ConfigureForm */
 ?>
-
 <div class="panel panel-default">
     <div class="panel-heading">
         <?= Yii::t('MostactiveusersModule.base', 'Most Active Users Module Configuration'); ?>
@@ -37,11 +32,10 @@ use yii\helpers\Url;
 
         <hr>
 
-        <?= Html::submitButton(Yii::t('MostactiveusersModule.base', 'Save'), ['class' => 'btn btn-primary']); ?>
+        <?= Button::save()->submit() ?>
 
-        <a class="btn btn-light" href="<?= Url::to(['/admin/module']); ?>">
-            <?= Yii::t('MostactiveusersModule.base', 'Back to modules'); ?>
-        </a>
+        <?= Button::light(Yii::t('MostactiveusersModule.base', 'Back to modules'))
+            ->link(['/admin/module']) ?>
 
         <?php $form::end(); ?>
     </div>
