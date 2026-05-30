@@ -8,7 +8,7 @@ return [
   'Hide users from these groups' => 'Masquer les membres de ces groupes',
   'Likes given' => 'Mention(s) "J\'aime"',
   'Most Active Users Module Configuration' => 'Configuration du module "Most Active Users"',
-  'Posts created' => 'Publication(s)',
+  'Posts' => 'Publication(s)',
   'Save' => 'Enregistrer',
   'The number of most active users that will be shown.' => 'Le nombre de membres devant être affiché.',
   'Total activity' => 'Activité totale',

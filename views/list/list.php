@@ -32,64 +32,63 @@ use yii\helpers\Url;
                 ->link(Url::to(['/mostactiveusers/list/export', 'format' => 'xlsx']))
                 ->icon('file-excel-o'),
         ]; ?>
-        <div class="btn-group dropdown calendar-entry-participants-export-button float-end mb-3">
+        <div class="btn-group dropdown float-end mb-3">
             <?= Button::accent()->icon('download')->sm()
-                ->link($buttons[0]->getHref())
-                ->pjax(false)->loader(false) ?>
+                    ->link($buttons[0]->getHref())
+                    ->pjax(false)->loader(false) ?>
             <?= Button::accent('')->sm()
-                ->cssClass('dropdown-toggle')
-                ->options(['data-bs-toggle' => 'dropdown'])
-                ->loader(false) ?>
+                    ->cssClass('dropdown-toggle')
+                    ->options(['data-bs-toggle' => 'dropdown'])
+                    ->loader(false) ?>
             <ul class="dropdown-menu">
                 <?php foreach ($buttons as $button) : ?>
                     <li><?= $button->pjax(false)->sm()->cssClass('dropdown-item') ?></li>
                 <?php endforeach; ?>
             </ul>
         </div>
+        <div class="clearfix"></div>
     <?php endif; ?>
 
     <div class="row hh-list">
         <?php
         $i = 0;
         foreach ($users as $user) :
-        ?>
+            $rank = $pagination->page * $pagination->pageSize + (++$i);
+            $fontSize = $rank <= 3 ? 18 : 14;
+            $paddingTop = $rank <= 3 ? 11 : 13;
+            ?>
             <div>
                 <a href="<?php echo $user->getUrl(); ?>">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex">
                         <span
-                            class="fs-2 badge rounded-pill text-bg-secondary"
-                            style="width: 40px; height: 40px; font-size: 20px !important; padding-top: 10px;">
-                            <?= $pagination->page * $pagination->pageSize + (++$i) ?>
+                            class="fs-2 badge rounded-pill text-bg-light"
+                            style="width: 40px; height: 40px; font-size: <?= $fontSize ?>px !important; padding-top: <?= $paddingTop ?>px;">
+                            <?= $rank ?>
                         </span>
 
-                        <?= Image::widget([
-                            'user' => $user,
-                            'width' => 50,
-                            'imageOptions' => ['class' => 'mx-3'],
-                        ]) ?>
+                        <div class="mx-3">
+                            <?= Image::widget([
+                                'user' => $user,
+                                'width' => 40,
+                            ]) ?>
+                        </div>
 
-                        <div class="flex-grow-1">
+                        <div class="d-flex flex-column justify-content-between">
                             <h4 class="mb-0">
                                 <strong><?= Html::encode($user->displayName) ?></strong>
                             </h4>
-                            <div class="mostactiveusers">
-                                <div class="entry float-start me-4">
-                                    <span class="count text-info"><?= $user['count_posts'] ?>
-                                    </span> <br> <span
-                                        class="title"><?= Yii::t('MostactiveusersModule.base', 'Posts created') ?>
-                                    </span>
+                            <div class="mostactiveusers d-flex justify-content-between gap-3">
+                                <div class="entry">
+                                    <span class="title"><?= Yii::t('MostactiveusersModule.base', 'Posts:') ?></span>
+                                    <span class="count text-info fw-bold"><?= $user['count_posts'] ?></span>
                                 </div>
-                                <div class="entry float-start me-4">
-                                    <span class="count text-info"><?= $user['count_comments'] ?>
-                                    </span> <br> <span
-                                        class="title"><?= Yii::t('MostactiveusersModule.base', 'Comments created') ?>
-                                    </span>
+                                <div class="entry">
+                                    <span class="title"><?= Yii::t('MostactiveusersModule.base', 'Comments:') ?></span>
+                                    <span class="count text-info fw-bold"><?= $user['count_comments'] ?></span>
                                 </div>
-                                <div class="entry float-start">
-                                    <span class="count text-info"><?= $user['count_likes'] ?>
-                                    </span> <br> <span
-                                        class="title"><?= Yii::t('MostactiveusersModule.base', 'Likes given') ?>
-                                    </span>
+                                <div class="entry">
+                                    <span class="title"><?= Yii::t('MostactiveusersModule.base', 'Likes:') ?></span>
+                                    <span class="count text-info fw-bold"><?= $user['count_likes'] ?></span>
                                 </div>
                             </div>
                         </div>

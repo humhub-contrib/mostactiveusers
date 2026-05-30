@@ -9,7 +9,7 @@ return [
     'Hide users from these groups' => '',
     'Likes given' => '',
     'Most Active Users Module Configuration' => '',
-    'Posts created' => '',
+    'Posts' => '',
     'Save' => '',
     'The number of most active users that will be shown.' => '',
     'Total activity' => '',
