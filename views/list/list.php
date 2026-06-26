@@ -33,12 +33,18 @@ use yii\helpers\Url;
                 ->icon('file-excel-o'),
         ]; ?>
         <div class="btn-group dropdown float-end mb-3">
-            <?= Button::accent()->icon('download')->sm()
+            <?= Button::accent()
+                    ->icon('download')
+                    ->options(['aria-label' => Yii::t('base', 'Export')])
                     ->link($buttons[0]->getHref())
-                    ->pjax(false)->loader(false) ?>
-            <?= Button::accent('')->sm()
+                    ->sm()
+                    ->pjax(false)
+                    ->loader(false) ?>
+            <?= Button::accent()
+                    ->options(['aria-label' => Yii::t('base', 'Actions')])
                     ->cssClass('dropdown-toggle')
                     ->options(['data-bs-toggle' => 'dropdown'])
+                    ->sm()
                     ->loader(false) ?>
             <ul class="dropdown-menu">
                 <?php foreach ($buttons as $button) : ?>
