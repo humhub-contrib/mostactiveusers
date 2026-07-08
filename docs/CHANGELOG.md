@@ -1,8 +1,8 @@
 Changelog
 =========
 
-0.3.2 (Unreleased)
-------------------
+0.3.2 (July 8, 2026)
+--------------------
 - Enh: Automated code refactoring for HumHub 1.18 using Rector
 - Enh #40: Add aria-label attribute for icon-only buttons
 
