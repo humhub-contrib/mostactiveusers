@@ -1,6 +1,10 @@
 Changelog
 =========
 
+0.4.0 (Unreleased)
+------------------
+- Fix #41: Respect user visibility in the ranking; Count only public published content; Skip users without activity; Refresh the cache on user, group and content changes; Faster query
+
 0.3.2 (July 8, 2026)
 --------------------
 - Enh: Automated code refactoring for HumHub 1.18 using Rector
