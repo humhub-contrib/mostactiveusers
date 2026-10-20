@@ -9,9 +9,9 @@
         "widget",
         "dashboard"
     ],
-    "version": "0.3.2",
+    "version": "0.4.0",
     "humhub": {
-        "minVersion": "1.18"
+        "minVersion": "1.19"
     },
     "homepage": "https://github.com/humhub-contrib/mostactiveusers",
     "authors": [
